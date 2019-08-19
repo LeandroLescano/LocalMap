@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Locales - [NOMBRE]</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
+  <script src="https://openlayers.org/en/v4.6.5/build/ol.js" type="text/javascript"></script>
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-light">
+    <mdb-navbar-brand><a class="navbar-brand " href="#">[NOMBRE]</a></mdb-navbar-brand>
+    <!-- Collapsible content -->
+      <links>
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a id="btnArgentina" (click)="goTo('Argentina')" class="nav-link waves-light">Argentina<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a (click)="goTo('Chile')" class="nav-link waves-light">Chile</a>
+          </li>
+          <li class="nav-item">
+            <a (click)="goTo('Colombia')" class="nav-link waves-light">Colombia</a>
+          </li>
+          <li class="nav-item">
+            <a (click)="goTo('Mexico')" class="nav-link waves-light">Mexico</a>
+          </li>
+          <li class="nav-item">
+            <a (click)="goTo('Paraguay')" class="nav-link waves-light">Paraguay</a>
+          </li>
+          <li class="nav-item">
+            <a (click)="goTo('Uruguay')" class="nav-link waves-light">Uruguay</a>
+          </li>
+        </ul>
+        </links>
+<!-- Collapsible content -->
+</mdb-navbar>
+<!--/.Navbar-->
+<body>
+  <!-- OSM map-->
+ <div (window:resize)="onResize($event)" id="map"><div id="popup"></div></div>
+  <!--OSM Maps-->
+</body>
+<!-- Footer -->
+<footer class="page-footer font-small special-color-dark">
+  <div class="footer-copyright text-center py-3">© 2019 Copyright: LNL</div>
+</footer>
+<!-- Footer -->
+
+</html>
