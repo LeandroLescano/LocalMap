@@ -39,26 +39,6 @@ export class AppComponent {
   }
 
   initializeMap(){
-    //----------------------POPUPS----------------------------------
-    // var container = document.getElementById('popup');
-    // var content = document.getElementById('popup-content');
-    // var closer = document.getElementById('popup-closer');
-    //
-    // var overlay = new ol.Overlay({
-    //   element: container,
-    //   autoPan: true,
-    //   autoPanAnimation: {
-    //       duration: 250
-    //   }
-    // });
-
-    // closer.onclick = function() {
-    //   overlay.setPosition(undefined);
-    //   closer.blur();
-    //   return false;
-    // };
-    // //------------- FIN POPUPS--------------------------------
-
     this.map = new ol.Map({
       target: 'map',
       layers: [
@@ -71,13 +51,6 @@ export class AppComponent {
         zoom: 12
       })
     });
-
-    // this.map.on('singleclick', function (event) {
-    //     var coordinate = event.coordinate;
-    //
-    //     content.innerHTML = '<b>Hello world!</b><br />I am a popup.';
-    //     overlay.setPosition(coordinate);
-    // });
 
     var element = document.getElementById('popup');
 
